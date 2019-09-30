@@ -10,6 +10,33 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  text-align: center;
+}
+@keyframes h1 {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+h1.first {
+  animation-name: h1;
+  animation-duration: 4s;
+}
+h1.second {
+  animation-name: h1;
+  animation-duration: 4s;
+  animation-delay: 2s;
 }
 nav {
   width: 100%;
@@ -100,16 +127,13 @@ input {
   display: block;
   width: 70%;
   height: 40px;
-  padding: 5px;
   margin: 30px auto;
-  border: solid #219948;
 }
 textarea {
   display: block;
   width: 70%;
   height: auto;
   margin: auto;
-  border: solid #219948;
 }
 button {
   padding: 5px;
@@ -145,8 +169,6 @@ h1.find {
 }
 p.find-1 {
   grid-area: find-1;
-  text-align: left;
-  font-family: "Yrsa", serif;
 }
 .lin {
   grid-area: lin;
@@ -156,8 +178,6 @@ p.find-1 {
 }
 p.find-2 {
   grid-area: find-2;
-  text-align: left;
-  font-family: "Yrsa", serif;
 }
 .mail {
   grid-area: mail;
@@ -167,8 +187,6 @@ p.find-2 {
 }
 p.find-3 {
   grid-area: find-3;
-  text-align: left;
-  font-family: "Yrsa", serif;
 }
 .loc {
   grid-area: loc;
@@ -178,8 +196,6 @@ p.find-3 {
 }
 p.find-4 {
   grid-area: find-4;
-  text-align: left;
-  font-family: "Yrsa", serif;
 }
 
 footer {
@@ -192,18 +208,16 @@ h1.big {
   font-family: "Yrsa", serif;
   font-weight: 700;
 }
-h1.first {
+h1.first,
+h1.second {
   color: #ffffff;
   font-family: "Yrsa", serif;
   font-weight: 700;
+  opacity: 0;
 }
 
-h1.small {
-  font-family: "Yrsa", serif;
-}
-h2 {
-  font-family: "Yrsa", serif;
-}
+h1.small,
+h2,
 h3 {
   font-family: "Yrsa", serif;
 }
@@ -214,6 +228,7 @@ h4 {
 }
 p {
   font-family: "Yrsa", serif;
+  text-align: left;
 }
 
 /*Mobile*/
@@ -312,9 +327,14 @@ p {
     padding: 5px;
     margin: 0px;
   }
+  p.find-1,
+  p.find-2,
+  p.find-3,
+  p.find-4 {
+    font-size: 20px;
+  }
   p.find-1 {
     grid-area: find-1;
-    font-size: 20px;
   }
   .lin {
     grid-area: lin;
@@ -322,7 +342,6 @@ p {
   }
   p.find-2 {
     grid-area: find-2;
-    font-size: 20px;
   }
   .mail {
     grid-area: mail;
@@ -330,7 +349,6 @@ p {
   }
   p.find-3 {
     grid-area: find-3;
-    font-size: 20px;
   }
   .loc {
     grid-area: loc;
@@ -338,7 +356,6 @@ p {
   }
   p.find-4 {
     grid-area: find-4;
-    font-size: 20px;
   }
 
   footer {
@@ -351,6 +368,11 @@ p {
     line-height: 30px;
   }
   h1.first {
+    margin: 80px 0px 0px 60px;
+    font-size: 25px;
+  }
+  h1.second {
+    margin: 20px 0px 0px 20px;
     font-size: 25px;
   }
 
@@ -376,7 +398,7 @@ p {
   }
 }
 
-/*laptop*/
+/*PC*/
 
 @media only screen and (min-width: 921px) {
   /*home page*/
@@ -390,6 +412,7 @@ p {
   nav ul {
     padding-top: 2.5rem;
     font-size: 50px;
+    font-weight: 700;
   }
   .head {
     margin: 10px;
@@ -408,24 +431,25 @@ p {
     margin: 10px;
     padding: 30px;
     width: 80%;
-    border: 3px solid #219948;
+    border: 2px solid #219948;
     border-radius: 20px;
   }
   /*contact me page*/
 
   .contact-form {
     height: 720px;
-    border: 3px solid #219948;
+    border: 2px solid #219948;
     border-radius: 20px;
   }
   input {
     border: 2px solid #219948;
     border-radius: 10px;
     font-size: 18px;
+    padding: 10px 20px 10px 20px;
   }
   textarea {
     padding: 20px;
-    border: 1px solid #219948;
+    border: 2px solid #219948;
     border-radius: 20px;
     font-size: 18px;
   }
@@ -442,21 +466,14 @@ p {
     padding: 15px;
     margin: 0px;
   }
-  p.find-1 {
-    font-size: 30px;
-  }
   .lin {
     padding: 15px;
-  }
-  p.find-2 {
-    font-size: 30px;
   }
   .mail {
     padding: 15px;
     margin-bottom: 20px;
   }
   p.find-3 {
-    font-size: 30px;
     margin-bottom: 20px;
   }
   .loc {
@@ -464,7 +481,6 @@ p {
     margin-bottom: 20px;
   }
   p.find-4 {
-    font-size: 30px;
     margin-bottom: 20px;
   }
   footer {
@@ -477,6 +493,11 @@ p {
     line-height: 60px;
   }
   h1.first {
+    margin: 230px 0px 0px 0px;
+    font-size: 60px;
+  }
+  h1.second {
+    margin: 30px -30px auto auto;
     font-size: 60px;
   }
   h1.small {
@@ -515,6 +536,7 @@ p {
   nav ul {
     padding-top: 2.5rem;
     font-size: 30px;
+    font-weight: 700;
   }
   .head {
     margin: 10px;
@@ -541,23 +563,24 @@ p {
 
   .contact-form {
     height: 650px;
-    border: 2px solid #219948;
+    border: 1px solid #219948;
     border-radius: 15px;
   }
   input {
-    border: 2px solid #219948;
+    border: 1px solid #219948;
     border-radius: 10px;
     font-size: 15px;
+    padding: 10px 20px 10px 20px;
   }
   textarea {
     padding: 20px;
-    border: 2px solid #219948;
+    border: 1px solid #219948;
     border-radius: 20px;
     font-size: 15px;
   }
   button {
-    width: 300px;
-    height: 40px;
+    width: 250px;
+    height: 45px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 30px;
@@ -571,21 +594,20 @@ p {
     padding: 15px;
     margin: 0px;
   }
-  p.find-1 {
+  p.find-1,
+  p.find-2,
+  p.find-3,
+  p.find-4 {
     font-size: 20px;
   }
   .lin {
     padding: 15px;
-  }
-  p.find-2 {
-    font-size: 20px;
   }
   .mail {
     padding: 15px;
     margin-bottom: 20px;
   }
   p.find-3 {
-    font-size: 20px;
     margin-bottom: 20px;
   }
   .loc {
@@ -593,7 +615,6 @@ p {
     margin-bottom: 20px;
   }
   p.find-4 {
-    font-size: 20px;
     margin-bottom: 20px;
   }
   footer {
@@ -606,6 +627,11 @@ p {
     line-height: 50px;
   }
   h1.first {
+    margin: 150px 0px 0px 0px;
+    font-size: 50px;
+  }
+  h1.second {
+    margin: 20px -20px auto auto;
     font-size: 50px;
   }
   h1.small {
