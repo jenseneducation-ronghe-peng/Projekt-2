@@ -1,0 +1,339 @@
+body {
+  margin-top: 0px;
+  margin: auto;
+}
+/*home page*/
+
+header {
+  width: 100%;
+  background-image: url(../Pic/BG.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+nav {
+  width: 100%;
+  background-color: #eaeaea;
+  align-items: center;
+  padding: 0px;
+}
+nav ul {
+  padding-inline-start: 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  list-style: none;
+  margin: auto;
+  font-family: "Yrsa", serif;
+  text-align: center;
+}
+nav a {
+  text-decoration: none;
+  color: #219948;
+}
+nav a:hover {
+  font-weight: 700px;
+}
+main {
+  width: 90%;
+  margin: auto;
+}
+.head {
+  text-align: center;
+}
+.part1 {
+  background-image: url(../Pic/web.png);
+  background-size: contain;
+}
+.part2 {
+  border: 1px solid #219948;
+  border-radius: 5px;
+}
+.part3 {
+  background-image: url(../Pic/Asset6.png);
+  background-size: contain;
+}
+.part4 {
+  background-image: url(../Pic/Asset5.png);
+  background-size: contain;
+}
+
+/*contact me page*/
+
+.contact-form {
+  width: 90%;
+  background: #eaeaea;
+  margin: auto;
+  border: 1px solid #219948;
+  border-radius: 5px;
+  text-align: center;
+}
+input {
+  display: block;
+  width: 90%;
+  height: 30px;
+  padding: 5px;
+  margin: 10px auto;
+  border: 1px solid #219948;
+  border-radius: 3px;
+}
+textarea {
+  display: block;
+  width: 90%;
+  height: auto;
+  padding: 10px;
+  margin: auto;
+  border: 1px solid #219948;
+  border-radius: 3px;
+}
+button {
+  padding: 5px;
+  background: #219948;
+  text-align: center;
+  font-family: "Yrsa", serif;
+  font-size: 20px;
+  font-weight: 700px;
+  color: #ffffff;
+  border-radius: 5px;
+}
+.find-me {
+  width: 70%;
+  text-align: center;
+}
+h1.find {
+  text-align: center;
+}
+.tele {
+  background-image: url(../Pic/300ppi/tele.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+p.find-1 {
+  text-align: left;
+  font-family: "Yrsa", serif;
+}
+.lin {
+  background-image: url(../Pic/300ppi/lin.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+p.find-2 {
+  text-align: left;
+  font-family: "Yrsa", serif;
+}
+.mail {
+  background-image: url(../Pic/300ppi/mail.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+p.find-3 {
+  text-align: left;
+  font-family: "Yrsa", serif;
+}
+.loc {
+  background-image: url(../Pic/300ppi/loc.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+p.find-4 {
+  text-align: left;
+  font-family: "Yrsa", serif;
+}
+
+footer {
+  width: 100%;
+  background: #eaeaea;
+  text-align: center;
+}
+
+h1.big {
+  font-family: "Yrsa", serif;
+  font-weight: 700;
+}
+h1.first {
+  color: #ffffff;
+  font-family: "Yrsa", serif;
+  font-weight: 700;
+}
+
+h1.small {
+  font-family: "Yrsa", serif;
+}
+h2 {
+  font-family: "Yrsa", serif;
+}
+h3 {
+  font-family: "Yrsa", serif;
+}
+h4 {
+  font-family: "Press Start 2P", cursive;
+  color: #219948;
+}
+p {
+  font-family: "Yrsa", serif;
+}
+
+/*Mobile*/
+
+@media only screen and (max-width: 560px) {
+  /*home page*/
+
+  header {
+    height: 215px;
+  }
+  nav {
+    height: 50px;
+  }
+  nav ul {
+    padding-top: 1rem;
+    font-size: 16px;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .head {
+    text-align: left;
+    margin: 10px;
+    padding: 5px;
+  }
+  .part1 {
+    margin: 10px;
+    width: 150px;
+    height: 150px;
+  }
+  .part2 {
+    margin: 10px;
+    padding: 10px;
+    width: 80%;
+  }
+  .part3 {
+    margin: 10px;
+    width: 150px;
+    height: 150px;
+  }
+  .part4 {
+    margin: 10px;
+    width: 150px;
+    height: 150px;
+  }
+
+  /*contact me page*/
+
+  .contact-form {
+    height: 410px;
+  }
+  input {
+    display: block;
+    width: 90%;
+    height: 30px;
+    padding: 5px;
+    margin: 10px auto;
+    border: 1px solid #219948;
+    border-radius: 3px;
+  }
+  textarea {
+    display: block;
+    width: 90%;
+    height: auto;
+    padding: 10px;
+    margin: auto;
+    border: 1px solid #219948;
+    border-radius: 3px;
+  }
+  button {
+    width: 150px;
+    height: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+  }
+  .find-me {
+    height: auto;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 15% 75%;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas:
+      "title title"
+      "tele find-1"
+      "lin find-2"
+      "mail find-3"
+      "loc find-4";
+    grid-column-gap: 2rem;
+    grid-row-gap: 0px;
+    text-align: center;
+  }
+  h1.find {
+    grid-area: title;
+  }
+  .tele {
+    grid-area: tele;
+    padding: 5px;
+    margin: 0px;
+  }
+  p.find-1 {
+    grid-area: find-1;
+    font-size: 20px;
+  }
+  .lin {
+    grid-area: lin;
+    padding: 5px;
+  }
+  p.find-2 {
+    grid-area: find-2;
+    margin: 0px;
+  }
+  .mail {
+    grid-area: mail;
+    padding: 5px;
+  }
+  p.find-3 {
+    grid-area: find-3;
+    font-size: 20px;
+  }
+  .loc {
+    grid-area: loc;
+    padding: 5px;
+  }
+  p.find-4 {
+    grid-area: find-4;
+    font-size: 20px;
+  }
+
+  footer {
+    height: 35px;
+    padding: 15px 0px 5px 0px;
+  }
+
+  h1.big {
+    font-size: 25px;
+    line-height: 30px;
+  }
+  h1.first {
+    font-size: 25px;
+  }
+
+  h1.small {
+    font-size: 25px;
+    line-height: 30px;
+  }
+  h2 {
+    font-size: 20px;
+    line-height: 25px;
+  }
+  h3 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  h4 {
+    font-size: 10px;
+    line-height: 12px;
+  }
+  p {
+    font-size: 15px;
+    line-height: 18px;
+  }
+}
