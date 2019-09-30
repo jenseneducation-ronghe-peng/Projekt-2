@@ -36,107 +36,148 @@ nav a:hover {
   font-weight: 700px;
 }
 main {
-  width: 90%;
+  width: 80%;
   margin: auto;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "head head"
+    "part1 part2-1"
+    "part3 part2-2"
+    "part4 part2-3";
+  align-items: center;
 }
 .head {
+  grid-area: head;
   text-align: center;
 }
 .part1 {
+  grid-area: part1;
   background-image: url(../Pic/web.png);
   background-size: contain;
 }
-.part2 {
-  border: 1px solid #219948;
-  border-radius: 5px;
+.part2-1,
+.part2-2,
+.part2-3 {
+  border: solid #219948;
+}
+.part2-1 {
+  grid-area: part2-1;
+}
+.part2-2 {
+  grid-area: part2-2;
+}
+.part2-3 {
+  grid-area: part2-3;
 }
 .part3 {
+  grid-area: part3;
   background-image: url(../Pic/Asset6.png);
   background-size: contain;
 }
 .part4 {
+  grid-area: part4;
   background-image: url(../Pic/Asset5.png);
   background-size: contain;
 }
 
 /*contact me page*/
 
+main.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .contact-form {
   width: 90%;
   background: #eaeaea;
   margin: auto;
-  border: 1px solid #219948;
-  border-radius: 5px;
+  border: solid #219948;
   text-align: center;
 }
 input {
   display: block;
-  width: 90%;
-  height: 30px;
+  width: 70%;
+  height: 40px;
   padding: 5px;
-  margin: 10px auto;
-  border: 1px solid #219948;
-  border-radius: 3px;
+  margin: 30px auto;
+  border: solid #219948;
 }
 textarea {
   display: block;
-  width: 90%;
+  width: 70%;
   height: auto;
-  padding: 10px;
   margin: auto;
-  border: 1px solid #219948;
-  border-radius: 3px;
+  border: solid #219948;
 }
 button {
   padding: 5px;
   background: #219948;
   text-align: center;
   font-family: "Yrsa", serif;
-  font-size: 20px;
-  font-weight: 700px;
   color: #ffffff;
-  border-radius: 5px;
 }
 .find-me {
   width: 70%;
   text-align: center;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 10% 40% 10% 40%;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "title title title title"
+    "tele find-1 lin find-2"
+    "mail find-3 loc find-4";
+  grid-column-gap: 2rem;
+  grid-row-gap: 1rem;
+  text-align: center;
 }
 h1.find {
+  grid-area: title;
   text-align: center;
 }
 .tele {
+  grid-area: tele;
   background-image: url(../Pic/300ppi/tele.png);
   background-repeat: no-repeat;
   background-size: contain;
 }
 p.find-1 {
+  grid-area: find-1;
   text-align: left;
   font-family: "Yrsa", serif;
 }
 .lin {
+  grid-area: lin;
   background-image: url(../Pic/300ppi/lin.png);
   background-repeat: no-repeat;
   background-size: contain;
 }
 p.find-2 {
+  grid-area: find-2;
   text-align: left;
   font-family: "Yrsa", serif;
 }
 .mail {
+  grid-area: mail;
   background-image: url(../Pic/300ppi/mail.png);
   background-repeat: no-repeat;
   background-size: contain;
 }
 p.find-3 {
+  grid-area: find-3;
   text-align: left;
   font-family: "Yrsa", serif;
 }
 .loc {
+  grid-area: loc;
   background-image: url(../Pic/300ppi/loc.png);
   background-repeat: no-repeat;
   background-size: contain;
 }
 p.find-4 {
+  grid-area: find-4;
   text-align: left;
   font-family: "Yrsa", serif;
 }
@@ -169,6 +210,7 @@ h3 {
 h4 {
   font-family: "Press Start 2P", cursive;
   color: #219948;
+  text-align: center;
 }
 p {
   font-family: "Yrsa", serif;
@@ -176,7 +218,7 @@ p {
 
 /*Mobile*/
 
-@media only screen and (max-width: 560px) {
+@media only screen and (max-width: 600px) {
   /*home page*/
 
   header {
@@ -190,6 +232,7 @@ p {
     font-size: 16px;
   }
   main {
+    width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -199,34 +242,31 @@ p {
     margin: 10px;
     padding: 5px;
   }
-  .part1 {
-    margin: 10px;
-    width: 150px;
-    height: 150px;
-  }
-  .part2 {
-    margin: 10px;
-    padding: 10px;
-    width: 80%;
-  }
-  .part3 {
-    margin: 10px;
-    width: 150px;
-    height: 150px;
-  }
+  .part1,
+  .part3,
   .part4 {
     margin: 10px;
     width: 150px;
     height: 150px;
+  }
+  .part2-1,
+  .part2-2,
+  .part2-3 {
+    margin: 10px;
+    padding: 10px;
+    width: 80%;
+    border: 1px solid #219948;
+    border-radius: 5px;
   }
 
   /*contact me page*/
 
   .contact-form {
     height: 410px;
+    border: 1px solid #219948;
+    border-radius: 5px;
   }
   input {
-    display: block;
     width: 90%;
     height: 30px;
     padding: 5px;
@@ -235,20 +275,18 @@ p {
     border-radius: 3px;
   }
   textarea {
-    display: block;
-    width: 90%;
-    height: auto;
+    width: 80%;
     padding: 10px;
-    margin: auto;
     border: 1px solid #219948;
     border-radius: 3px;
   }
   button {
     width: 150px;
     height: 35px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 15px;
+    margin: 15px auto auto auto;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: 700px;
   }
   .find-me {
     height: auto;
@@ -284,7 +322,7 @@ p {
   }
   p.find-2 {
     grid-area: find-2;
-    margin: 0px;
+    font-size: 20px;
   }
   .mail {
     grid-area: mail;
@@ -335,5 +373,259 @@ p {
   p {
     font-size: 15px;
     line-height: 18px;
+  }
+}
+
+/*laptop*/
+
+@media only screen and (min-width: 921px) {
+  /*home page*/
+
+  header {
+    height: 560px;
+  }
+  nav {
+    height: 130px;
+  }
+  nav ul {
+    padding-top: 2.5rem;
+    font-size: 50px;
+  }
+  .head {
+    margin: 10px;
+    padding: 5px;
+  }
+  .part1,
+  .part3,
+  .part4 {
+    margin: 10px;
+    width: 200px;
+    height: 200px;
+  }
+  .part2-1,
+  .part2-2,
+  .part2-3 {
+    margin: 10px;
+    padding: 30px;
+    width: 80%;
+    border: 3px solid #219948;
+    border-radius: 20px;
+  }
+  /*contact me page*/
+
+  .contact-form {
+    height: 720px;
+    border: 3px solid #219948;
+    border-radius: 20px;
+  }
+  input {
+    border: 2px solid #219948;
+    border-radius: 10px;
+    font-size: 18px;
+  }
+  textarea {
+    padding: 20px;
+    border: 1px solid #219948;
+    border-radius: 20px;
+    font-size: 18px;
+  }
+  button {
+    width: 300px;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    border-radius: 50px;
+    font-size: 30px;
+  }
+  .tele {
+    padding: 15px;
+    margin: 0px;
+  }
+  p.find-1 {
+    font-size: 30px;
+  }
+  .lin {
+    padding: 15px;
+  }
+  p.find-2 {
+    font-size: 30px;
+  }
+  .mail {
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+  p.find-3 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  .loc {
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+  p.find-4 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  footer {
+    height: 100px;
+    padding: 15px 0px 5px 0px;
+  }
+
+  h1.big {
+    font-size: 60px;
+    line-height: 60px;
+  }
+  h1.first {
+    font-size: 60px;
+  }
+  h1.small {
+    font-size: 50px;
+    line-height: 50px;
+  }
+  h2 {
+    font-size: 45px;
+    line-height: 45px;
+  }
+  h3 {
+    font-size: 40px;
+    line-height: 40px;
+  }
+  h4 {
+    font-size: 20px;
+    line-height: 25px;
+  }
+  p {
+    font-size: 30px;
+    line-height: 30px;
+  }
+}
+
+/*tablet*/
+
+@media only screen and (max-width: 920px) and (min-width: 601px) {
+  /*home page*/
+
+  header {
+    height: 400px;
+  }
+  nav {
+    height: 100px;
+  }
+  nav ul {
+    padding-top: 2.5rem;
+    font-size: 30px;
+  }
+  .head {
+    margin: 10px;
+    padding: 5px;
+  }
+  .part1,
+  .part3,
+  .part4 {
+    margin: 10px;
+    width: 140px;
+    height: 140px;
+  }
+  .part2-1,
+  .part2-2,
+  .part2-3 {
+    margin: 10px;
+    padding: 20px;
+    width: 80%;
+    border: 2px solid #219948;
+    border-radius: 15px;
+  }
+
+  /*contact me page*/
+
+  .contact-form {
+    height: 650px;
+    border: 2px solid #219948;
+    border-radius: 15px;
+  }
+  input {
+    border: 2px solid #219948;
+    border-radius: 10px;
+    font-size: 15px;
+  }
+  textarea {
+    padding: 20px;
+    border: 2px solid #219948;
+    border-radius: 20px;
+    font-size: 15px;
+  }
+  button {
+    width: 300px;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    border-radius: 40px;
+    font-size: 25px;
+  }
+  .find-me {
+    width: 70%;
+  }
+  .tele {
+    padding: 15px;
+    margin: 0px;
+  }
+  p.find-1 {
+    font-size: 20px;
+  }
+  .lin {
+    padding: 15px;
+  }
+  p.find-2 {
+    font-size: 20px;
+  }
+  .mail {
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+  p.find-3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  .loc {
+    padding: 0px;
+    margin-bottom: 20px;
+  }
+  p.find-4 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  footer {
+    height: 70px;
+    padding: 15px 0px 5px 0px;
+  }
+
+  h1.big {
+    font-size: 50px;
+    line-height: 50px;
+  }
+  h1.first {
+    font-size: 50px;
+  }
+  h1.small {
+    font-size: 45px;
+    line-height: 45px;
+  }
+  h2 {
+    font-size: 40px;
+    line-height: 40px;
+  }
+  h3 {
+    font-size: 35px;
+    line-height: 35px;
+  }
+  h4 {
+    font-size: 16px;
+    line-height: 16px;
+  }
+  p {
+    font-size: 15px;
+    line-height: 15px;
   }
 }
