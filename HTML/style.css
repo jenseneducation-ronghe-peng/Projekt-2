@@ -230,6 +230,9 @@ p {
   font-family: "Yrsa", serif;
   text-align: left;
 }
+p.footer {
+  text-align: center;
+}
 
 /*Mobile*/
 
